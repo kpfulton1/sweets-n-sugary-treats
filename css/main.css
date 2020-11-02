@@ -1,0 +1,140 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  list-style: none;
+  height: 100%;
+}
+
+nav ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #000;
+
+}
+
+.logo{
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: deeppink;
+  font-weight: 900;
+  font-family: 'Merriweather', serif;
+  text-shadow: 1px 1px 1px #000;
+  }
+
+  .logo:hover {
+    font-size: 3em;
+    color: #00ffff;
+    transition: 1s;
+  }
+
+.banner{
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-ms-flex;
+  display:-o-flex;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.4) rotate(5deg);
+  animation: animate 25s infinite;
+}
+
+.banner img:nth-child(3){
+  animation-delay: 6s;
+}
+
+.banner img:nth-child(2){
+  animation-delay: 12s;
+}
+
+.banner img:nth-child(1){
+  animation-delay: 18s;
+}
+
+@keyframes animate {
+  25%{
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+nav ul li a {
+    font-size: 1.5em;
+  }
+
+.logo {
+    font-size: 2.25em;
+
+}
+}
+
+@media only screen and (min-width: 1200px) {
+
+  nav ul li a {
+      font-size: 2em;
+    }
+
+  .logo {
+      font-size: 2.5em;
+    }
+}
